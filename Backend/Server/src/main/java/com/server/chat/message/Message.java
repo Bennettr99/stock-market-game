@@ -19,41 +19,23 @@ import javax.persistence.Table;
 @Table(name = "messages")
 public class Message {
 
-	/**
-	 * Id of the message. Automatically generated when the message object is created
-	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 
-	/**
-	 * The username of the user who sent the message
-	 */
 	@Column(name = "user_from")
 	private String userFrom;
 
-	/**
-	 * The username of the user who the message is intended for
-	 */
 	@Column(name = "user_to")
 	private String userTo;
 
-	/**
-	 * The time that the message was sent
-	 */
 	@Column(name = "time")
 	private Timestamp date;
 
-	/**
-	 * The message to be sent to the user
-	 */
 	@Column(name = "message")
 	private String message;
 
-	/**
-	 * The id of the group that the users belong to
-	 */
 	@Column(name = "groupId")
 	private int groupId;
 

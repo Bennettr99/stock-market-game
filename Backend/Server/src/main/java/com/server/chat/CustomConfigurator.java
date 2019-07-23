@@ -13,9 +13,6 @@ import org.springframework.web.socket.server.standard.ServerEndpointRegistration
  */
 public class CustomConfigurator extends ServerEndpointRegistration.Configurator implements ApplicationContextAware {
 
-	/**
-	 * Configuration mechanism that manages server endpoints
-	 */
 	private static volatile BeanFactory context;
 
 	/**

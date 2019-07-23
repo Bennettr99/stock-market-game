@@ -16,9 +16,6 @@ import com.server.stock.Stock;
 @Service
 public class TransactionService {
 
-	/**
-	 * Interface for connecting to transactions table
-	 */
 	@Autowired
 	TransactionRepository repo;
 

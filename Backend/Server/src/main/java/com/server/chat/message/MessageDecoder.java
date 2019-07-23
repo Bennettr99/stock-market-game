@@ -13,9 +13,6 @@ import com.google.gson.Gson;
  */
 public class MessageDecoder implements Decoder.Text<Message> {
 
-	/**
-	 * Format of incoming message objects
-	 */
 	private static Gson gson = new Gson();
 
 	/**

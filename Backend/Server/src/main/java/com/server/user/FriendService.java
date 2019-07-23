@@ -11,9 +11,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class FriendService {
 
-	/**
-	 * Interface for connecting to friends table
-	 */
 	@Autowired
 	FriendRepository repo;
 

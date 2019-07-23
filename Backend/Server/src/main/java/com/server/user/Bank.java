@@ -15,23 +15,13 @@ import javax.persistence.Table;
 @Table(name = "bank")
 public class Bank {
 
-	/**
-	 * Id of the Bank account (equivalent to the user id)
-	 * 
-	 */
 	@Id
 	@Column(name = "id")
 	private int id;
 
-	/**
-	 * Cash in the bank account
-	 */
 	@Column(name = "cash")
 	private Double cash;
 
-	/**
-	 * The user who this bank belongs to
-	 */
 	@OneToOne(mappedBy = "bank")
 	private User user;
 

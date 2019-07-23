@@ -21,27 +21,15 @@ import com.server.user.UserService;
 @Service
 public class InventoryService {
 
-    /**
-     * Interface for connecting to inventory table
-     */
     @Autowired
     InventoryRepository userStocks;
 
-    /**
-     * Service for Stocks
-     */
     @Autowired
     StockService stockService;
 
-    /**
-     * Service for User transactions
-     */
     @Autowired
     TransactionService transactionService;
 
-    /**
-     * Service for Users
-     */
     @Autowired
     UserService userService;
 

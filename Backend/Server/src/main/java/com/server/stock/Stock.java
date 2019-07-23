@@ -30,10 +30,6 @@ import com.server.inventory.Inventory;
 @Table(name = "Stock")
 public class Stock {
 
-	/**
-	 * Endpoint for IEX Trading API
-	 * https://iextrading.com/developer/docs/#getting-started
-	 */
 	@Transient
 	private final String IEXSTOCK = "https://ws-api.iextrading.com/1.0/stock/";
 

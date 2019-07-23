@@ -17,9 +17,6 @@ import com.server.user.FriendRepository;
 @Service
 public class MessageGroupService {
 
-	/**
-	 * Interface for connecting to MessageGroup table
-	 */
 	@Autowired
 	MessageGroupRepository groups;
 

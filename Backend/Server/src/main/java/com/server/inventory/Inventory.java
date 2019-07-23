@@ -23,31 +23,18 @@ import com.server.stock.Stock;
 @Table(name = "inventory")
 public class Inventory {
 
-	/**
-	 * The id of the inventory entry. Automatically created when the inventory entry
-	 * is created
-	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 
-	/**
-	 * The number of stocks owned
-	 */
 	@Column(name = "quantity")
 	private int quantity;
 
-	/**
-	 * The stock associated with the inventory entry
-	 */
 	@OneToOne
 	@JoinColumn(name = "stock_id")
 	private Stock stock;
 
-	/**
-	 * The user id associated with the inventory entry
-	 */
 	@Column(name = "user_id")
 	private int userId;
 

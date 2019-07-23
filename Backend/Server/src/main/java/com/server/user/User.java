@@ -28,60 +28,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Table(name = "users")
 public class User {
 
-	/**
-	 * The id of the user. Automatically created when the user is created
-	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 
-	/**
-	 * The username of the user.
-	 */
 	@Column(name = "USERNAME")
 	private String username;
 
-	/**
-	 * The password of the user
-	 */
 	@Column(name = "PASSWORD")
 	private String password;
 
-	/**
-	 * The first name of the user
-	 */
 	@Column(name = "FIRST_NAME")
 	private String firstName;
 
-	/**
-	 * The last name of the user
-	 */
 	@Column(name = "LAST_NAME")
 	private String lastName;
 
-	/**
-	 * The user's bank containing their cash
-	 */
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "id", referencedColumnName = "id")
 	private Bank bank;
 
-	/**
-	 * List of Friends
-	 */
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
 	private List<Friend> friends;
 
-	/**
-	 * Boolean value indicating if the user is an admin
-	 */
 	@Column(name = "ADMIN")
 	private boolean admin;
 
-	/**
-	 * Boolean value indicating if the user is banned
-	 */
 	@Column(name = "BANNED")
 	private boolean banned;
 

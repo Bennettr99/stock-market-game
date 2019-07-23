@@ -16,21 +16,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-	/**
-	 * Interface for connecting to user table
-	 */
 	@Autowired
 	private UserRepository users;
 
-	/**
-	 * Services for User's Friends
-	 */
 	@Autowired
 	private FriendService friends;
 
-	/**
-	 * Services for User's Cash
-	 */
 	@Autowired
 	private BankService userBank;
 

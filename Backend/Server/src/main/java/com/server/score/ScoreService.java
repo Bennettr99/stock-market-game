@@ -29,21 +29,12 @@ import com.server.user.UserService;
 @Service
 public class ScoreService {
 
-	/**
-	 * Service method for user functions
-	 */
 	@Autowired
 	UserService userService;
 
-	/**
-	 * Interface for connecting to score table
-	 */
 	@Autowired
 	ScoreRepository repo;
 
-	/**
-	 * Service method for inventory functions
-	 */
 	@Autowired
 	InventoryService inventoryService;
 

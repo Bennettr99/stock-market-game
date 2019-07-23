@@ -22,23 +22,14 @@ import javax.persistence.Table;
 @Table(name = "`groups`") // no idea why that fixes my issues
 public class MessageGroup {
 
-	/**
-	 * The id of the Message Group. Automatically created when the group is created
-	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 
-	/**
-	 * The user id of one user
-	 */
 	@Column(name = "user_1")
 	private int user1;
 
-	/**
-	 * The user id of the other user
-	 */
 	@Column(name = "user_2")
 	private int user2;
 

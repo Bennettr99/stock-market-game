@@ -27,24 +27,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class GroupChatServer {
 
-	/**
-	 * Map of all sessions and the group ids associated with the sections
-	 */
 	private static Map<Session, Integer> sessionGroupIdMap = new HashMap<>();
-	
-	/**
-	 * Map of all group ids and a map containing the usernames in each group and their sessions
-	 */
 	private static Map<Integer, Map<String, Session>> groupIdSessionMap = new HashMap<>();
-
-	/**
-	 * Map of all sessions and the usernames associated with the sections
-	 */
 	private static Map<Session, String> sessionUsernameMap = new HashMap<>();
-
-	/**
-	 * Logger for keeping track of logs
-	 */
 	private final Logger logger = LoggerFactory.getLogger(GroupChatServer.class);
 
 	

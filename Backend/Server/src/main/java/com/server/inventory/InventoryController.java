@@ -22,9 +22,6 @@ import com.server.stock.Stock;
 @RequestMapping("/users")
 public class InventoryController {
 
-	/**
-	 * Service methods for Inventory functions
-	 */
 	@Autowired
 	InventoryService inventory;
 

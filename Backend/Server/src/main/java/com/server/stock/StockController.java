@@ -19,9 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/stock")
 public class StockController {
 	
-	/**
-	 * Service methods for stock functions
-	 */
 	@Autowired
 	private StockService stockService;
 

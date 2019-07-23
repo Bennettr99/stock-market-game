@@ -20,9 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-	/**
-	 * Service methods for user functions
-	 */
 	@Autowired
 	private UserService userService;
 

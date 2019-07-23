@@ -16,9 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/chat")
 public class MessageGroupController {
 
-	/**
-	 * Service methods for MessageGroup functions
-	 */
 	@Autowired
 	private MessageGroupService service;
 

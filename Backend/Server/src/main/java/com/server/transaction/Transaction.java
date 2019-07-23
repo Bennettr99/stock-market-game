@@ -19,6 +19,55 @@ import java.sql.Timestamp;
 @Table(name = "transactions")
 public class Transaction {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private int id;
+
+	@Column(name = "user_id")
+	private int userId;
+
+	@Column(name = "Ticker")
+	private String ticker;
+
+	@Column(name = "date")
+	private Timestamp date;
+
+	@Column(name = "quantity")
+	private int quantity;
+
+	@Column(name = "buy")
+	private boolean buy;
+
+	@Column(name = "price")
+	private double price;
+	
+	/**
+	 * Empty Constructor
+	 */
+	public Transaction() {
+
+	}
+
+	/**
+	 * Constructor for creating transaction objects
+	 * 
+	 * @param userId Id of the user who made the transaction
+	 * @param ticker Ticker symbol of the stock involved in the transaction
+	 * @param date The date of the transaction
+	 * @param buy Boolean value that indicates if the user was buying or selling
+	 * @param quantity The number of shares involved in the transaction
+	 * @param price The cost of the transaction
+	 */
+	public Transaction(int userId, String ticker, Timestamp date, boolean buy, int quantity, double price) {
+		this.userId = userId;
+		this.ticker = ticker;
+		this.date = date;
+		this.buy = buy;
+		this.quantity = quantity;
+		this.price = price;
+	}
+	
 	/**
 	 * Get the transaction id
 	 * 
@@ -145,75 +194,8 @@ public class Transaction {
 		this.price = price;
 	}
 
-	/**
-	 * Empty Constructor
-	 */
-	public Transaction() {
+	
 
-	}
-
-	/**
-	 * Constructor for creating transaction objects
-	 * 
-	 * @param userId Id of the user who made the transaction
-	 * @param ticker Ticker symbol of the stock involved in the transaction
-	 * @param date The date of the transaction
-	 * @param buy Boolean value that indicates if the user was buying or selling
-	 * @param quantity The number of shares involved in the transaction
-	 * @param price The cost of the transaction
-	 */
-	public Transaction(int userId, String ticker, Timestamp date, boolean buy, int quantity, double price) {
-		this.userId = userId;
-		this.ticker = ticker;
-		this.date = date;
-		this.buy = buy;
-		this.quantity = quantity;
-		this.price = price;
-	}
-
-	/**
-	 * Id of the transaction. Automatically generated when a transaction object is
-	 * created
-	 */
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private int id;
-
-	/**
-	 * The id of the user involved in the transaction
-	 */
-	@Column(name = "user_id")
-	private int userId;
-
-	/**
-	 * The Ticker symbol of the stock involved in the transaction
-	 */
-	@Column(name = "Ticker")
-	private String ticker;
-
-	/**
-	 * The date the transaction occurred
-	 */
-	@Column(name = "date")
-	private Timestamp date;
-
-	/**
-	 * The number of shares involved in the transaction
-	 */
-	@Column(name = "quantity")
-	private int quantity;
-
-	/**
-	 * Indicates if the transaction was a purchase or sale
-	 */
-	@Column(name = "buy")
-	private boolean buy;
-
-	/**
-	 * The price of the transaction
-	 */
-	@Column(name = "price")
-	private double price;
+	
 
 }

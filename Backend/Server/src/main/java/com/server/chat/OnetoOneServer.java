@@ -39,45 +39,20 @@ import com.server.user.UserService;
 @Component
 public class OnetoOneServer {
 
-	/**
-	 * Map of all sessions and the group ids associated with the sections
-	 */
 	private static Map<Session, Integer> sessionGroupIdMap = new HashMap<>();
-
-	/**
-	 * Map of all group ids and a map containing the usernames in each group and
-	 * their sessions
-	 */
 	private static Map<Integer, Map<String, Session>> groupIdSessionMap = new HashMap<>();
-
-	/**
-	 * Map of all sessions and the usernames associated with the sections
-	 */
 	private static Map<Session, String> sessionUsernameMap = new HashMap<>();
+	private final Logger logger = LoggerFactory.getLogger(OnetoOneServer.class);
 
-	/**
-	 * Interface for connecting to the messages table
-	 */
 	@Autowired
 	MessageRepository messages;
 
-	/**
-	 * Service for Message Group functions
-	 */
 	@Autowired
 	MessageGroupService service;
 
-	/**
-	 * Service for User functions
-	 */
 	@Autowired
 	UserService users;
-
-	/**
-	 * Logger for keeping track of logs
-	 */
-	private final Logger logger = LoggerFactory.getLogger(OnetoOneServer.class);
-
+	
 	/**
 	 * User joins the chat. Adds the users to the session maps.
 	 * 

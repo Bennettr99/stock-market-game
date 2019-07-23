@@ -22,23 +22,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Table(name = "friend")
 public class Friend {
 
-	/**
-	 * Id of the friend object. Automatically generated when the friend object is created
-	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 
-	/**
-	 * Id of the user who added the friend
-	 */
 	@Column(name = "user_id")
 	private int user;
 
-	/**
-	 * The user object of the added friend
-	 */
 	@ManyToOne
 	@JoinColumn(name = "friend_id")
 	private User friend;

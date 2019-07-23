@@ -22,40 +22,24 @@ import java.sql.Timestamp;
 @Table(name = "`scores`")
 public class Score {
 
-	/**
-	 * The id of the score entry. Automatically created when the score entry is
-	 * created
-	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
 
-	/**
-	 * Date of the score entry
-	 */
 	@JsonFormat(pattern = "yyyy-MM-dd")
 	@Column(name = "date")
 	private Date date;
 
-	/**
-	 * The id of the user who the score belongs to
-	 */
 	@Column(name = "user")
 	private int userId;
 
-	/**
-	 * The score value
-	 */
 	@Column(name = "portfolio_value")
 	private double portfolioValue;
 
 	@Column(name = "cash")
 	private double cash;
 	
-	/**
-	 * The rank of the user on that date
-	 */
 	@Column(name = "ranking")
 	private int rank;
 	

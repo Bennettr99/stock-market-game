@@ -18,9 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ScoreController {
 
-	/**
-	 * Service method for score functions
-	 */
 	@Autowired
 	ScoreService service;
 	

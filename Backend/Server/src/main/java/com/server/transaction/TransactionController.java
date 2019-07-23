@@ -18,9 +18,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/users")
 public class TransactionController {
 
-	/**
-	 * Service methods for transaction functions
-	 */
 	@Autowired
 	TransactionService transaction;
 
